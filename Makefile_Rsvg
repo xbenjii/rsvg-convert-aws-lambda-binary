@@ -89,7 +89,6 @@ LIBFFI_SOURCE=libffi-$(LIBFFI_VERSION).tar.gz
 LIBFFI=$(CACHE_DIR)/lib64/libffi.a
 
 $(LIBFFI_SOURCE): 
-# 	curl -LO ftp://sourceware.org/pub/libffi/$(LIBFFI_SOURCE)
 	curl -LO https://sourceware.org/pub/libffi/$(LIBFFI_SOURCE)
 
 $(LIBFFI): $(LIBFFI_SOURCE)
@@ -135,7 +134,6 @@ $(GLIB): $(GLIB_SOURCE) $(LIBFFI)
 LIBXML2_SOURCE=libxml2-$(LIBXML2_VERSION).tar.xz
 LIBXML2=$(CACHE_DIR)/lib/libxml2.a
 $(LIBXML2_SOURCE):
-# 	curl -LO ftp://xmlsoft.org/libxml2/$(LIBXML2_SOURCE)
 	curl -LO https://download.gnome.org/sources/libxml2/$(LIBXML2_MINOR_VERSION)/$(LIBXML2_SOURCE)
 $(LIBXML2): $(LIBXML2_SOURCE)
 	tar xJf $<
@@ -201,7 +199,6 @@ BZIP2_SOURCE=bzip2-$(BZIP2_VERSION).tar.gz
 LIBBZ2=$(CACHE_DIR)/lib/libbz2.a
 
 $(BZIP2_SOURCE):
-# 	curl -LO http://prdownloads.sourceforge.net/bzip2/bzip2-$(BZIP2_VERSION).tar.gz
 	curl -LO https://sourceware.org/pub/bzip2/bzip2-$(BZIP2_VERSION).tar.gz
 
 $(LIBBZ2): $(BZIP2_SOURCE)
